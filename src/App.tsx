@@ -6,10 +6,14 @@ import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import Hero from "./components/Hero";
 import Service from "./components/Service";
+import WhatsAppButton from "./components/WhatsAppButton";
+
+
 
 export default function App() {
   return (
     <main className="container mx-auto sm:px-12 px-5 space-y-7">
+      <WhatsAppButton/>
       <Navbar />
       <Hero />
       <About />

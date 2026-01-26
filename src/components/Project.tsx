@@ -94,6 +94,7 @@ export default function Project() {
           <div className="flex gap-2 [grid-area:l]">
             {Array.from({ length: count }).map((_, i) => (
               <div
+              key={i}
                 className={twMerge(
                   "w-2 sm:w-3 h-1 sm:h-2 rounded-lg transition-colors cursor-pointer",
                   i + 1 == current ? "bg-black" : "bg-gray-300",
