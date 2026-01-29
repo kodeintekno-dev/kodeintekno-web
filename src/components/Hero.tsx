@@ -828,10 +828,10 @@ export default function Hero() {
         </p>
         <div className="mt-6 flex justify-center gap-3 lg:gap-4 font-semibold lg:text-xl">
           <a
-            className="bg-orange-500 hover:bg-orange-600 border border-orange-700 transition-colors duration-300 text-white px-5 py-3 rounded-lg"
+            className="bg-orange-500 hover:bg-orange-600 border border-orange-700 transition-colors duration-300 text-white flex px-5 py-3 rounded-lg"
             href="#"
           >
-            Kontak ↗
+            Kontak <img src="/img/icon/arrow_right_line.svg" alt="arrow-icon" />
           </a>
           <a
             className="px-5 py-3 rounded-lg border border-black/10 transition-colors duration-300"

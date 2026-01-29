@@ -19,11 +19,22 @@ export default function Footer() {
           <li key={section} className="flex-1">
             <ul className="space-y-4">
               <li className="font-semibold text-3xl">{capitalize(section)}</li>
-              {items.map((item, i) => (
-                <li key={i}>
-                  <a href="#">{item}</a>
-                </li>
-              ))}
+              {items.map((item, i) => {
+                const isObject = typeof item === "object";
+
+                return (
+                  <li key={i}>
+                    <a
+                      href={isObject ? item.url : "#"}
+                      target={isObject ? "_blank" : undefined}
+                      rel={isObject ? "noopener noreferrer" : undefined}
+                      className="hover:underline"
+                    >
+                      {isObject ? item.label : item}
+                    </a>
+                  </li>
+                );
+              })}
             </ul>
           </li>
         ))}
