@@ -26,7 +26,7 @@ export default function Navbar() {
             </li>
           ))}
         </ul>
-        <a href="https://wa.me/6282170270241" target="_blank">
+        <a href="https://wa.me/6282170270241" target="_blank" className="hidden lg:flex">
           <Button
             variant="default"
             className="bg-orange-500 hover:bg-orange-600 border border-orange-700 cursor-pointer"
