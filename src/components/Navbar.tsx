@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { links } from "../data/navbar";
 import { twMerge } from "tailwind-merge";
+import { Button } from "./ui/button";
 
 export default function Navbar() {
   const [navHamburger, setNavHamburger] = useState(false);
@@ -25,6 +26,14 @@ export default function Navbar() {
             </li>
           ))}
         </ul>
+        <a href="https://wa.me/6282170270241" target="_blank">
+          <Button
+            variant="default"
+            className="bg-orange-500 hover:bg-orange-600 border border-orange-700 cursor-pointer"
+          >
+            Kontak
+          </Button>
+        </a>
         <div
           className="lg:hidden flex flex-col ml-auto gap-1 w-7 h-5 cursor-pointer"
           id="navMobile"

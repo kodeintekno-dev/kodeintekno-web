@@ -1,8 +1,1 @@
-export const links = [
-  "Beranda",
-  "Layanan",
-  "Team",
-  "Portfolio",
-  "Testimonial",
-  "Kontak",
-];
+export const links = ["Tentang", "Team", "Portfolio", "Testimonial"];
