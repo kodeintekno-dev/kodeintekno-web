@@ -9,6 +9,7 @@ import {
 } from "@/components/ui/carousel";
 import { useEffect, useState } from "react";
 import { twMerge } from "tailwind-merge";
+import Section from "./ui/section";
 
 export default function Testimonial() {
   const [api, setApi] = useState<CarouselApi>();
@@ -40,7 +41,7 @@ export default function Testimonial() {
   }, [api]);
 
   return (
-    <section className="p-5 py-8 sm:px-8 lg:p-16 bg-white border border-black/10 rounded-lg space-y-8">
+    <Section className="p-5 py-8 sm:px-8 lg:p-16 space-y-8">
       <div className="text-center space-y-4">
         <h1 className="font-semibold text-3xl lg:text-6xl">Testimonial</h1>
         <p className="lg:text-xl max-w-[50ch] mx-auto text-black/60">
@@ -102,6 +103,6 @@ export default function Testimonial() {
           <CarouselNext className="[grid-area:n] justify-self-end" />
         </div>
       </Carousel>
-    </section>
+    </Section>
   );
 }

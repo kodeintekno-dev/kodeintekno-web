@@ -1,8 +1,9 @@
 import { service } from "../data/service";
+import Section from "./ui/section";
 
 export default function Service() {
   return (
-    <section className="flex flex-col px-4 md:px-10 xl:px-16 py-10 md:py-14 lg:py-24 xl:py-30 bg-white border border-black/10 rounded-lg my-10">
+    <Section className="flex flex-col px-4 md:px-10 xl:px-16 py-10 md:py-14 lg:py-24 xl:py-30 my-10">
       <div className="flex flex-col items-center text-center max-w-none md:max-w-xl xl:max-w-3xl mx-auto mb-14 xl:mb-20">
         <h1 className="text-2xl md:text-3xl xl:text-6xl font-bold md:font-semibold mb-4">
           Layanan Kami
@@ -24,6 +25,6 @@ export default function Service() {
           </div>
         ))}
       </div>
-    </section>
+    </Section>
   );
 }

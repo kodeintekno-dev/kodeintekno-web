@@ -9,6 +9,7 @@ import {
 } from "@/components/ui/carousel";
 import { useEffect, useState } from "react";
 import { twMerge } from "tailwind-merge";
+import Section from "./ui/section";
 
 export default function Project() {
   const [api, setApi] = useState<CarouselApi>();
@@ -40,7 +41,7 @@ export default function Project() {
   }, [api]);
 
   return (
-    <section className="p-5 py-8 sm:px-8 lg:p-16 bg-white border border-black/10 rounded-lg space-y-8">
+    <Section className="p-5 py-8 sm:px-8 lg:p-16 space-y-8">
       <div className="text-center space-y-4">
         <h1 className="font-semibold text-3xl lg:text-6xl">Project</h1>
         <p className="max-w-[50ch] mx-auto lg:text-lg text-black/60">
@@ -74,16 +75,16 @@ export default function Project() {
                   />
                   <p className="font-semibold">
                     {(i + 1).toString().padStart(2, "0")}.{" "}
-                    {project == "" ? "???" : project}
+                    {project.title == "" ? "???" : project.title}
                   </p>
                 </div>
                 <img
                   src={
-                    project == ""
+                    project.thumbnail == ""
                       ? "/img/placeholder.png"
-                      : "/img/project/" + project.toLowerCase() + ".png"
+                      : "/img/project/" + project.slug.toLowerCase() + ".webp"
                   }
-                  alt={project}
+                  alt={project.slug}
                 />
               </div>
             </CarouselItem>
@@ -106,6 +107,6 @@ export default function Project() {
           <CarouselNext className="[grid-area:n] justify-self-end" />
         </div>
       </Carousel>
-    </section>
+    </Section>
   );
 }

@@ -1,6 +1,7 @@
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import MotionPathPlugin from "gsap/MotionPathPlugin";
+import Section from "./ui/section";
 
 gsap.registerPlugin(MotionPathPlugin);
 
@@ -51,8 +52,8 @@ export default function Hero() {
   }, []);
 
   return (
-    <section
-      className="bg-white border border-black/10 rounded-lg py-24 px-5 mt-40 overflow-hidden flex flex-col justify-center items-center"
+    <Section
+      className="py-24 px-5 overflow-hidden flex flex-col justify-center items-center"
       style={{
         backgroundImage: "url(/img/hero-bg.webp)",
         backgroundRepeat: "no-repeat",
@@ -841,6 +842,6 @@ export default function Hero() {
           </a>
         </div>
       </div>
-    </section>
+    </Section>
   );
 }

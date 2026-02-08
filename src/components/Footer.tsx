@@ -9,7 +9,7 @@ export default function Footer() {
   }
 
   return (
-    <footer className="-mt-7 py-24 px-5 md:px-12 lg:px-16 grid gap-15 [grid-template-areas:'l''f''c'] xl:[grid-template-areas:'l_f''c_f'] border-x border-dashed border-black">
+    <footer className="-mt-7 py-24 px-5 md:px-12 lg:px-16 grid gap-15 [grid-template-areas:'l''f''c'] xl:[grid-template-areas:'l_f''c_f'] border-x border-dashed border-black/40 container mx-auto">
       <img src="/img/logo.png" alt="logo" className="w-52 [grid-area:l]" />
       <p className="[grid-area:c] inline-flex items-end">
         &copy; 2025 Kodeintekno | All rights reserved.
