@@ -36,22 +36,24 @@ export default function Navbar() {
               <Link
                 to={link.href}
                 onClick={(e) => {
-                  if (
-                    !link.href.includes("#") &&
-                    window.location.pathname === link.href
-                  ) {
-                    e.preventDefault();
-                    window.scrollTo({ top: 0, behavior: "smooth" });
-                  }
+                  setNavHamburger(false);
 
-                  if (
-                    link.href.includes("#") &&
-                    window.location.pathname === "/"
-                  ) {
-                    e.preventDefault();
-                    const id = link.href.split("#")[1];
-                    const el = document.getElementById(id);
-                    el?.scrollIntoView({ behavior: "smooth" });
+                  const [path, hash] = link.href.split("#");
+
+                  if (hash) {
+                    if (window.location.pathname === path) {
+                      e.preventDefault();
+                      const el = document.getElementById(hash);
+                      el?.scrollIntoView({ behavior: "smooth" });
+                    } else {
+                      e.preventDefault();
+                      window.location.href = link.href;
+                    }
+                  } else {
+                    if (window.location.pathname === link.href) {
+                      e.preventDefault();
+                      window.scrollTo({ top: 0, behavior: "smooth" });
+                    }
                   }
                 }}
                 className="text-black/60 font-medium"
