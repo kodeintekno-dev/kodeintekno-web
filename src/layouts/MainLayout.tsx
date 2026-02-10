@@ -6,7 +6,7 @@ export default function MainLayout() {
   return (
     <>
       <Navbar />
-      <main className="container mx-auto sm:px-12 px-5 space-y-7 pt-36">
+      <main className="container mx-auto sm:px-12 px-5 space-y-7 pt-24 sm:pt-28 md:pt-32">
         <Outlet />
         <Footer />
       </main>

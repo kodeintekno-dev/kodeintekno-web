@@ -13,7 +13,7 @@ export default function Navbar() {
 
   return (
     <div className="fixed top-0 inset-x-0 container mx-auto sm:px-12 px-5 space-y-5 z-50">
-      <nav className="flex justify-between items-center px-10 py-5 border border-black/10 rounded-lg mt-10 bg-white/80 backdrop-blur-xl relative">
+      <nav className="flex justify-between items-center px-10 py-5 border border-black/10 rounded-lg mt-4 sm:mt-8 bg-white/80 backdrop-blur-xl relative">
         <Link
           to="/"
           onClick={(e) => {
@@ -25,8 +25,8 @@ export default function Navbar() {
         >
           <img
             src="/img/logo.png"
-            alt="Kodeintekno Logo"
-            className="h-6 sm:h-8 cursor-pointer"
+            alt="Logo"
+            className="h-5 sm:h-6 md:h-8 cursor-pointer"
           />
         </Link>
 
