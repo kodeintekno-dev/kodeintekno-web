@@ -96,18 +96,50 @@ export default function Navbar() {
           navHamburger
             ? "lg:hidden translate-x-0"
             : "translate-x-2/1 pointer-events-none opacity-0",
-          "flex flex-col gap-4 items-center bg-white px-10 py-5 border border-black/10 rounded-lg transition-transform duration-300 absolute inset-x-5 sm:inset-x-12",
+          "flex flex-col gap-4 items-center bg-white px-10 py-5 border border-black/10 rounded-lg transition-transform duration-300 absolute inset-x-5 sm:inset-x-12 z-50",
         )}
       >
         {links.map((link, i) => (
           <li key={i}>
-            <a href={link.href} className="text-black/60 font-medium">
+            <Link
+              to={link.href}
+              onClick={(e) => {
+                // tutup menu hamburger setelah klik
+                setNavHamburger(false);
+
+                // scroll ke atas jika route sama dan bukan anchor
+                if (
+                  !link.href.includes("#") &&
+                  window.location.pathname === link.href
+                ) {
+                  e.preventDefault();
+                  window.scrollTo({ top: 0, behavior: "smooth" });
+                }
+
+                // scroll ke element jika anchor (#id)
+                if (
+                  link.href.includes("#") &&
+                  window.location.pathname === "/"
+                ) {
+                  e.preventDefault();
+                  const id = link.href.split("#")[1];
+                  const el = document.getElementById(id);
+                  el?.scrollIntoView({ behavior: "smooth" });
+                }
+              }}
+              className="text-black/60 font-medium"
+            >
               {link.label}
-            </a>
+            </Link>
           </li>
         ))}
       </ul>
-      {navHamburger && <div className="fixed inset-0 bg-black/30 z-40" />}
+      {navHamburger && (
+        <div
+          className="fixed inset-0 bg-black/30 z-40"
+          onClick={() => setNavHamburger(false)}
+        />
+      )}
     </div>
   );
 }
