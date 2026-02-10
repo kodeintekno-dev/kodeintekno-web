@@ -4,11 +4,11 @@ export const sosialMedia = [
     href: "https://instagram.com",
   },
   {
-    label: "Facebook",
-    href: "https://facebook.com",
+    label: "LinkedIn",
+    href: "https://www.linkedin.com/company/kodeintekno/",
   },
   {
-    label: "LinkedIn",
-    href: "https://linkedin.com",
+    label: "Youtube",
+    href: "https://www.youtube.com/@kodeintekno",
   },
 ];
