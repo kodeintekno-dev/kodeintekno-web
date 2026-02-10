@@ -60,8 +60,8 @@ export default function Hero() {
       style={{
         backgroundImage: "url(/img/hero-bg.webp)",
         backgroundRepeat: "no-repeat",
-        backgroundSize: "min(960px, 100%) auto",
-        backgroundPosition: "center top",
+        backgroundSize: "cover",
+        backgroundPosition: "center",
       }}
     >
       <svg
