@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { links } from "../data/navbar";
 import { twMerge } from "tailwind-merge";
 import { Button } from "./ui/button";
+import { Link } from "react-router";
 
 export default function Navbar() {
   const [navHamburger, setNavHamburger] = useState(false);
@@ -13,11 +14,22 @@ export default function Navbar() {
   return (
     <div className="fixed top-0 inset-x-0 container mx-auto sm:px-12 px-5 space-y-5 z-50">
       <nav className="flex justify-between items-center px-10 py-5 border border-black/10 rounded-lg mt-10 bg-white/80 backdrop-blur-xl relative">
-        <img
-          src="/img/logo.png"
-          alt="Kodeintekno Logo"
-          className="h-6 sm:h-8"
-        />
+        <Link
+          to="/"
+          onClick={(e) => {
+            if (window.location.pathname === "/") {
+              e.preventDefault();
+              window.scrollTo({ top: 0, behavior: "smooth" });
+            }
+          }}
+        >
+          <img
+            src="/img/logo.png"
+            alt="Kodeintekno Logo"
+            className="h-6 sm:h-8 cursor-pointer"
+          />
+        </Link>
+
         <ul className="hidden lg:flex gap-8 items-center">
           {links.map((link, i) => (
             <li key={i}>
