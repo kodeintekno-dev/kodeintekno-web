@@ -3,6 +3,8 @@ import gsap from "gsap";
 import MotionPathPlugin from "gsap/MotionPathPlugin";
 import Section from "./ui/section";
 import { ArrowUpRight } from "lucide-react";
+import { Button } from "./ui/button";
+import { Link } from "react-router";
 
 gsap.registerPlugin(MotionPathPlugin);
 
@@ -829,20 +831,16 @@ export default function Hero() {
           untuk Mendukung Pertumbuhan dan Kesuksesan Bisnis Anda!
         </p>
         <div className="mt-6 flex justify-center gap-3 lg:gap-4 font-semibold lg:text-xl">
-          <a
-            className="flex items-center gap-2 bg-orange-500 hover:bg-orange-600 border border-orange-700 transition-colors duration-300 text-white px-5 py-3 rounded-lg"
-            href="#contact"
-          >
-            Kontak
-            <ArrowUpRight size={18} />
-          </a>
+          <Button asChild variant="cta" size="cta">
+            <a href="#contact">
+              Kontak
+              <ArrowUpRight size={18} />
+            </a>
+          </Button>
 
-          <a
-            className="px-5 py-3 rounded-lg border border-black/10 transition-colors duration-300"
-            href="#"
-          >
-            Portfolio
-          </a>
+          <Button asChild variant="outline" size="cta">
+            <Link to="/projects">Portfolio</Link>
+          </Button>
         </div>
       </div>
     </Section>
