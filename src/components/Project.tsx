@@ -3,6 +3,7 @@ import Section from "./ui/section";
 import { Button } from "./ui/button";
 import { Link } from "react-router";
 import ProjectCard from "./ui/projectCard";
+import { ArrowUpRight } from "lucide-react";
 
 export default function Project() {
   return (
@@ -27,7 +28,9 @@ export default function Project() {
       </div>
       <div className="flex justify-center pt-4">
         <Button asChild variant="outline" size="cta">
-          <Link to="/projects">Lihat Semua</Link>
+          <Link to="/projects">
+            Lihat Semua <ArrowUpRight size={18} />
+          </Link>
         </Button>
       </div>
     </Section>
