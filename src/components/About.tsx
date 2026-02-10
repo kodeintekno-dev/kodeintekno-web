@@ -2,7 +2,10 @@ import Section from "./ui/section";
 
 export default function About() {
   return (
-    <Section className="flex flex-col lg:flex-row gap-10 items-center px-4 md:px-10 xl:px-16 py-4 md:py-10 xl:py-16">
+    <Section
+      id="tentang"
+      className="flex flex-col lg:flex-row gap-10 items-center px-4 md:px-10 xl:px-16 py-4 md:py-10 xl:py-16"
+    >
       <div className="flex-1 px-4 md:px-10 xl:px-16 py-4 md:py-10 xl:py-16 text-center md:text-left">
         <h1 className="text-2xl md:text-3xl xl:text-6xl font-bold md:font-semibold mb-4">
           Tentang Kami

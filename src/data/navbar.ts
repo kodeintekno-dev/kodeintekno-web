@@ -3,5 +3,5 @@ export const links = [
   { label: "Tentang", href: "/#tentang" },
   { label: "Layanan", href: "/#layanan" },
   { label: "Portfolio", href: "/projects" },
-  { label: "Testimonial", href: "/#testimonial" },
+  // { label: "Testimonial", href: "/#testimonial" },
 ];
