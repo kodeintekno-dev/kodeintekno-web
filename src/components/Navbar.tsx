@@ -104,10 +104,8 @@ export default function Navbar() {
             <Link
               to={link.href}
               onClick={(e) => {
-                // tutup menu hamburger setelah klik
                 setNavHamburger(false);
 
-                // scroll ke atas jika route sama dan bukan anchor
                 if (
                   !link.href.includes("#") &&
                   window.location.pathname === link.href
@@ -116,7 +114,6 @@ export default function Navbar() {
                   window.scrollTo({ top: 0, behavior: "smooth" });
                 }
 
-                // scroll ke element jika anchor (#id)
                 if (
                   link.href.includes("#") &&
                   window.location.pathname === "/"
