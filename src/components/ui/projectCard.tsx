@@ -11,7 +11,7 @@ type ProjectCardProps = {
 export default function ProjectCard({
   project,
   idx,
-  imageClassName = "w-full h-60",
+  imageClassName = "w-full h-48 sm:h-60",
   className,
 }: ProjectCardProps) {
   return (

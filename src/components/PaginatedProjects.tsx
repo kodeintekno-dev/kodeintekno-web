@@ -20,7 +20,7 @@ export type ProjectValue = {
 
 function Projects({ currentProjects }: { currentProjects: ProjectValue[] }) {
   return (
-    <div className="grid grid-cols-3 gap-10">
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
       {currentProjects &&
         currentProjects.map((project, idx) => (
           <ProjectCard project={project} idx={idx} />
@@ -46,7 +46,7 @@ export default function PaginatedProjects({
   };
 
   return (
-    <Section className="w-full px-17.5 py-16 flex flex-col">
+    <Section className="w-full px-4 sm:px-8 lg:px-16 py-16 flex flex-col">
       <Projects currentProjects={currentItems} />
       <div className="w-full grid place-items-center">
         <ReactPaginate

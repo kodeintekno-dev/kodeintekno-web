@@ -7,10 +7,10 @@ export default function RecentProject() {
         <div className="flex-1 mb-6 lg:mb-0 lg:pr-8">
           <span className="text-sm sm:text-base">Company Profile</span>
           <div className="mt-2">
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-semibold mb-4">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-semibold">
               Avieaventura
             </h2>
-            <p className="text-sm sm:text-base lg:text-lg text-black/60">
+            <p className="text-base sm:text-lg lg:text-xl text-black/60">
               Website company profile Avieaventura yang dirancang untuk
               memperkuat citra profesional, menyampaikan layanan secara jelas,
               serta meningkatkan kepercayaan klien melalui tampilan modern dan
