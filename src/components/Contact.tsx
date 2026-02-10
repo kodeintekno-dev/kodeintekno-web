@@ -2,7 +2,10 @@ import Section from "./ui/section";
 
 export default function Contact() {
   return (
-    <Section className="p-5 py-8 sm:px-8 lg:p-16 flex flex-col xl:flex-row gap-16">
+    <Section
+      id="contact"
+      className="p-5 py-8 sm:px-8 lg:p-16 flex flex-col xl:flex-row gap-16"
+    >
       <div className="flex-1 text-center md:text-left space-y-4">
         <h1 className="font-semibold text-3xl lg:text-6xl">Hubungi Kami</h1>
         <p className="text-black/60 lg:text-lg">

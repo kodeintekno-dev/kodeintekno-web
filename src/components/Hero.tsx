@@ -2,6 +2,7 @@ import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import MotionPathPlugin from "gsap/MotionPathPlugin";
 import Section from "./ui/section";
+import { ArrowUpRight } from "lucide-react";
 
 gsap.registerPlugin(MotionPathPlugin);
 
@@ -829,11 +830,13 @@ export default function Hero() {
         </p>
         <div className="mt-6 flex justify-center gap-3 lg:gap-4 font-semibold lg:text-xl">
           <a
-            className="bg-orange-500 hover:bg-orange-600 border border-orange-700 transition-colors duration-300 text-white px-5 py-3 rounded-lg"
-            href="#"
+            className="flex items-center gap-2 bg-orange-500 hover:bg-orange-600 border border-orange-700 transition-colors duration-300 text-white px-5 py-3 rounded-lg"
+            href="#contact"
           >
-            Kontak ↗
+            Kontak
+            <ArrowUpRight size={18} />
           </a>
+
           <a
             className="px-5 py-3 rounded-lg border border-black/10 transition-colors duration-300"
             href="#"
