@@ -6,11 +6,14 @@ export default function Projects() {
   return (
     <>
       <Helmet>
-        <title>Projects | Kodeintekno</title>
-        <meta name="description" content="Welcome to kodeintekno" />
+        <title>Portofolio Proyek – Kodeintekno</title>
+        <meta
+          name="description"
+          content="Halaman ini menampilkan portofolio proyek Kodeintekno berupa pengembangan website dan aplikasi sebagai solusi digital untuk kebutuhan bisnis dan organisasi."
+        />
       </Helmet>
       <RecentProject />
-      <PaginatedProjects projectsPerPage={6}/>
+      <PaginatedProjects projectsPerPage={6} />
     </>
   );
 }

@@ -11,8 +11,11 @@ export default function Home() {
   return (
     <>
       <Helmet>
-        <title>Home | Kodeintekno</title>
-        <meta name="description" content="Welcome to kodeintekno" />
+        <title>Kodeintekno – Solusi Digital & Pengembangan Sistem</title>
+        <meta
+          name="description"
+          content="Kodeintekno adalah perusahaan teknologi yang menyediakan layanan pengembangan perangkat lunak, website, dan solusi digital berbasis kebutuhan bisnis, dengan fokus pada kualitas, inovasi, dan pengembangan talenta teknologi."
+        />
       </Helmet>
       <WhatsAppButton />
       <Hero />
