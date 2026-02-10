@@ -2,6 +2,7 @@ import { projects } from "@/data/project";
 import Section from "./ui/section";
 import { Button } from "./ui/button";
 import { Link } from "react-router";
+import ProjectCard from "./ui/projectCard";
 
 export default function Project() {
   return (
@@ -17,32 +18,11 @@ export default function Project() {
 
       <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
         {projects.slice(0, 3).map((project, i) => (
-          <div
-            key={i}
-            className="px-5 py-3 bg-gray-50 border border-black/10 rounded-lg space-y-2.5"
-          >
-            <div className="flex gap-1 items-center">
-              <img
-                src="/img/icon/picture.svg"
-                alt="Picture"
-                className="rounded-sm"
-              />
-              <p className="font-semibold">
-                {(i + 1).toString().padStart(2, "0")}.{" "}
-                {project.title === "" ? "???" : project.title}
-              </p>
-            </div>
-
-            <img
-              src={
-                project.thumbnail === ""
-                  ? "/img/placeholder.png"
-                  : "/img/project/" + project.slug.toLowerCase() + ".webp"
-              }
-              alt={project.slug}
-              className="w-full rounded-md"
-            />
-          </div>
+          <ProjectCard
+            project={project}
+            idx={i}
+            imageClassName="w-full h-[180px]"
+          />
         ))}
       </div>
       <div className="flex justify-center pt-4">
