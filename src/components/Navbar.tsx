@@ -33,12 +33,35 @@ export default function Navbar() {
         <ul className="hidden lg:flex gap-8 items-center">
           {links.map((link, i) => (
             <li key={i}>
-              <a href={link.href} className="text-black/60 font-medium">
+              <Link
+                to={link.href}
+                onClick={(e) => {
+                  if (
+                    !link.href.includes("#") &&
+                    window.location.pathname === link.href
+                  ) {
+                    e.preventDefault();
+                    window.scrollTo({ top: 0, behavior: "smooth" });
+                  }
+
+                  if (
+                    link.href.includes("#") &&
+                    window.location.pathname === "/"
+                  ) {
+                    e.preventDefault();
+                    const id = link.href.split("#")[1];
+                    const el = document.getElementById(id);
+                    el?.scrollIntoView({ behavior: "smooth" });
+                  }
+                }}
+                className="text-black/60 font-medium"
+              >
                 {link.label}
-              </a>
+              </Link>
             </li>
           ))}
         </ul>
+
         <a
           href="https://wa.me/6282170270241"
           target="_blank"
