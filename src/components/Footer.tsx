@@ -27,8 +27,20 @@ export default function Footer() {
           <ul className="space-y-4">
             <li className="font-semibold text-3xl">Kontak</li>
 
-            <li>+62 82170270241</li>
-            <li>kodeintekno@gmail.com</li>
+            <li>
+              <a
+                href="https://wa.me/6282170270241?text=Halo%20Kodeintekno,%20saya%20ingin%20konsultasi."
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                +62 821-7027-0241
+              </a>
+            </li>
+            <li>
+              <a href="mailto:kodeintekno@gmail.com?subject=Kontak%20dari%20Website">
+                kodeintekno@gmail.com
+              </a>
+            </li>
             <li>Harvest City, Ragemanunggal, Setu, Bekasi.</li>
           </ul>
         </li>
