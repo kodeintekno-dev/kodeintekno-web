@@ -41,7 +41,7 @@ export default function Footer() {
                 kodeintekno@gmail.com
               </a>
             </li>
-            <li>Harvest City, Ragemanunggal, Setu, Bekasi.</li>
+            <li>Harvest City, Jl. Orchid Raya A, Ragemanunggal, Setu, Bekasi Regency.</li>
           </ul>
         </li>
 
