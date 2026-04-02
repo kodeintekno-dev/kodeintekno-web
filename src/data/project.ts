@@ -21,9 +21,9 @@ export const projects: ProjectValue[] = [
     thumbnail: "/img/project/kodein-wablast.webp",
     category: "Web App",
     demo: "https://wablast.kodein.sch.id/",
-    year: "2023",
+    year: "2025",
     client: "Internal Kodeintekno",
-    techStack: ["Node.js", "Express", "React", "WhatsApp API"],
+    techStack: ["Node.js", "Express", "React"],
     fullDescription:
       "Aplikasi perpesanan masal (WhatsApp Blast) yang efisien untuk kebutuhan automasi komunikasi sekolah dan organisasi. Proyek ini mencakup fitur manajemen kontak, penjadwalan pesan, dan analitik pengiriman secara real-time.",
   },
@@ -34,11 +34,11 @@ export const projects: ProjectValue[] = [
     thumbnail: "/img/project/anggaran-kodein.webp",
     category: "Web App",
     demo: "https://anggaran.kodein.sch.id/",
-    year: "2024",
-    client: "Yayasan Kodein",
-    techStack: ["React", "Laravel", "PostgreSQL", "Tailwind CSS"],
+    year: "2026",
+    client: "Sekolah Developer Indonesia",
+    techStack: ["Next.js", "PostgreSQL", "Tailwind CSS"],
     fullDescription:
-      "Sistem Informasi Manajemen Anggaran Sekolah (KDNINV) yang komprehensif, memungkinkan transparansi dan akurasi dalam pelaporan keuangan yayasan serta pemantauan pengeluaran di setiap departemen secara otomatis.",
+      "Sistem Informasi Manajemen Anggaran Sekolah Developer Indonesia yang komprehensif, memungkinkan transparansi dan akurasi dalam pelaporan keuangan yayasan serta pemantauan pengeluaran di setiap departemen secara otomatis.",
   },
   {
     id: 4,
@@ -47,7 +47,7 @@ export const projects: ProjectValue[] = [
     thumbnail: "/img/project/nusavy.webp",
     category: "Landing Page",
     demo: "https://nusavy.vercel.app",
-    year: "2023",
+    year: "2026",
     client: "Nusavy Tech",
     techStack: ["Next.js", "Tailwind CSS", "TypeScript"],
     fullDescription:
@@ -60,10 +60,10 @@ export const projects: ProjectValue[] = [
     slug: "al-wildan",
     thumbnail: "/img/project/al-wildan.webp",
     category: "Education",
-    year: "2024",
+    year: "2025",
     client: "Sekolah Al-Wildan",
-    techStack: ["WordPress", "Custom CSS", "PHP"],
+    techStack: ["Next.js", "Tailwind CSS"],
     fullDescription:
-      "Modernisasi website sekolah Al-Wildan untuk memberikan akses informasi pendidikan yang lebih baik bagi wali murid dan calon siswa, mencakup pendaftaran online dan sistem manajemen konten yang mudah dioperasikan.",
+      "Modernisasi website sekolah Al-Wildan untuk memberikan akses informasi pendidikan yang lebih baik bagi wali murid dan calon siswa.",
   },
 ];
