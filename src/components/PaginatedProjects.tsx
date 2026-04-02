@@ -16,6 +16,7 @@ export type ProjectValue = {
   slug: string;
   thumbnail: string;
   category: string;
+  demo?: string;
 };
 
 function Projects({ currentProjects }: { currentProjects: ProjectValue[] }) {
