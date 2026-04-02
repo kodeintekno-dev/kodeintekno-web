@@ -1,5 +1,6 @@
 import Section from "./ui/section";
 import { Button } from "./ui/button";
+import { Link } from "react-router";
 
 export default function RecentProject() {
   return (
@@ -18,23 +19,33 @@ export default function RecentProject() {
               informatif.
             </p>
           </div>
-          <Button className="mt-6" variant="cta" size="cta" asChild>
-            <a
-              href="https://aviaventura.com/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Kunjungi Website
-            </a>
-          </Button>
+          <div className="flex flex-wrap gap-4 mt-6">
+            <Button variant="cta" size="cta" asChild>
+              <a
+                href="https://aviaventura.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Kunjungi Website
+              </a>
+            </Button>
+            <Button variant="outline" size="cta" asChild>
+              <Link to="/projects/aviaventura">Lihat Detail</Link>
+            </Button>
+          </div>
         </div>
 
         <div className="flex-1 grid place-items-center lg:place-items-end">
-          <img
-            src="/img/project/aviaventura.webp"
-            alt="Project Image"
-            className="w-full max-w-full sm:max-w-md lg:max-w-lg"
-          />
+          <Link
+            to="/projects/aviaventura"
+            className="w-full max-w-full sm:max-w-md lg:max-w-lg hover:opacity-90 transition-opacity"
+          >
+            <img
+              src="/img/project/aviaventura.webp"
+              alt="Project Image"
+              className="w-full h-full object-contain"
+            />
+          </Link>
         </div>
       </div>
     </Section>

@@ -17,6 +17,11 @@ export type ProjectValue = {
   thumbnail: string;
   category: string;
   demo?: string;
+  fullDescription?: string;
+  techStack?: string[];
+  year?: string;
+  client?: string;
+  gallery?: string[];
 };
 
 function Projects({ currentProjects }: { currentProjects: ProjectValue[] }) {

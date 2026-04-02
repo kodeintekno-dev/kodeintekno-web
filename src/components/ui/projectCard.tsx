@@ -1,6 +1,7 @@
 import type { ProjectValue } from "../PaginatedProjects";
 import clsx from "clsx";
 import { ExternalLink } from "lucide-react";
+import { Link } from "react-router";
 
 type ProjectCardProps = {
   project: ProjectValue;
@@ -18,35 +19,42 @@ export default function ProjectCard({
   return (
     <div
       className={clsx(
-        "group w-full p-5 bg-[#FBFBFB] border border-black/10 rounded-lg flex flex-col gap-2.5 cursor-pointer",
+        "group w-full p-5 bg-[#FBFBFB] border border-black/10 rounded-lg flex flex-col gap-2.5",
         className,
       )}
     >
       <div className="flex justify-between items-center w-full">
-        <div className="flex gap-1 items-center">
+        <Link
+          to={`/projects/${project.slug}`}
+          className="flex gap-1 items-center hover:opacity-70 transition-opacity flex-1 overflow-hidden"
+        >
           <img
             src="/img/icon/picture.svg"
             alt="Picture"
             className="rounded-sm"
           />
-          <p className="text-sm font-semibold truncate">
+          <p className="text-sm font-semibold truncate leading-tight">
             {idx !== undefined && <>{String(idx + 1).padStart(2, "0")}. </>}
             {project.title === "" ? "???" : project.title}
           </p>
-        </div>
+        </Link>
         {project.demo && (
           <a
             href={project.demo}
             target="_blank"
             rel="noopener noreferrer"
             className="text-black/40 hover:text-black transition-colors"
+            title="Kunjungi Live Demo"
           >
             <ExternalLink size={16} />
           </a>
         )}
       </div>
 
-      <div className={clsx("overflow-hidden rounded-md", imageClassName)}>
+      <Link
+        to={`/projects/${project.slug}`}
+        className={clsx("overflow-hidden rounded-md block", imageClassName)}
+      >
         <img
           src={project.thumbnail}
           alt={project.title}
@@ -56,7 +64,7 @@ export default function ProjectCard({
             group-hover:scale-110
           "
         />
-      </div>
+      </Link>
     </div>
   );
 }
