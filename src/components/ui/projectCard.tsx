@@ -1,6 +1,6 @@
 import type { ProjectValue } from "../PaginatedProjects";
 import clsx from "clsx";
-import { ExternalLink } from "lucide-react";
+import { ExternalLink, ArrowUpRight } from "lucide-react";
 import { Link } from "react-router";
 
 type ProjectCardProps = {
@@ -53,17 +53,24 @@ export default function ProjectCard({
 
       <Link
         to={`/projects/${project.slug}`}
-        className={clsx("overflow-hidden rounded-md block", imageClassName)}
+        className={clsx("overflow-hidden rounded-md block relative", imageClassName)}
       >
         <img
           src={project.thumbnail}
           alt={project.title}
           className="
             w-full h-full object-cover object-top
-            transition-transform duration-200 ease-in-out
+            transition-transform duration-500 ease-in-out
             group-hover:scale-110
           "
         />
+        {/* Hover Overlay */}
+        <div className="absolute inset-0 bg-black/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+          <div className="bg-white/10 backdrop-blur-md border border-white/20 px-4 py-2 rounded-full flex items-center gap-2 text-white font-semibold transform translate-y-2 group-hover:translate-y-0 transition-transform duration-300">
+            <span className="text-sm">Lihat Detail</span>
+            <ArrowUpRight size={16} />
+          </div>
+        </div>
       </Link>
     </div>
   );
