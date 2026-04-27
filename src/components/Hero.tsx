@@ -4,7 +4,6 @@ import MotionPathPlugin from "gsap/MotionPathPlugin";
 import Section from "./ui/section";
 import { ArrowUpRight } from "lucide-react";
 import { Button } from "./ui/button";
-import { Link } from "react-router";
 
 gsap.registerPlugin(MotionPathPlugin);
 
@@ -823,23 +822,25 @@ export default function Hero() {
         </defs>
       </svg>
       <div className="text-center flex flex-col items-center">
-        <h1 className="font-semibold text-3xl lg:text-6xl lg:max-w-[15ch]">
-          Creative Digital Agency
+        <h1 className="font-semibold text-3xl lg:text-6xl lg:max-w-[25ch]">
+          Teknologi untuk Bisnis. <br />
+          Inovasi untuk <span className="text-[#FF743C]">Dampak.</span>
         </h1>
-        <p className="text-black/60 mt-4 lg:text-lg max-w-[50ch]">
-          Tempat Anda Menemukan Berbagai Solusi Digital dan Teknologi Terbaik
-          untuk Mendukung Pertumbuhan dan Kesuksesan Bisnis Anda!
+        <p className="text-black/60 mt-4 lg:text-lg max-w-[70ch]">
+          Solusi teknologi kelas dunia untuk mengakselerasi bisnis Anda,
+          sekaligus mitra strategis dalam merancang program kolaborasi sosial
+          yang berdampak luas.
         </p>
-        <div className="mt-6 flex justify-center gap-3 lg:gap-4 font-semibold lg:text-xl">
+        <div className="mt-6 flex flex-col sm:flex-row justify-center gap-3 lg:gap-4 font-semibold lg:text-xl">
           <Button asChild variant="cta" size="cta">
             <a href="#contact">
-              Kontak
+              Mulai Proyek Digital
               <ArrowUpRight size={18} />
             </a>
           </Button>
 
           <Button asChild variant="outline" size="cta">
-            <Link to="/projects">Portfolio</Link>
+            <a href="#csr">Program Kolaborasi</a>
           </Button>
         </div>
       </div>

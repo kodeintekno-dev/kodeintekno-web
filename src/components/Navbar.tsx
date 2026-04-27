@@ -64,18 +64,18 @@ export default function Navbar() {
           ))}
         </ul>
 
-        <a
-          href="https://wa.me/6282170270241"
-          target="_blank"
-          className="hidden lg:flex"
-        >
-          <Button
-            variant="default"
-            className="bg-orange-500 hover:bg-orange-600 border border-orange-700 cursor-pointer"
-          >
-            Kontak
+        <div className="hidden lg:flex gap-3">
+          <Button asChild variant="cta" className="hidden lg:flex w-fit">
+            <a href="#contact">Mulai Proyek Digital</a>
           </Button>
-        </a>
+          <Button
+            asChild
+            variant="outline"
+            className="hidden lg:flex w-fit border-orange-500 text-orange-500 hover:bg-orange-50"
+          >
+            <a href="#csr">Kemitraan CSR</a>
+          </Button>
+        </div>
         <div
           className="lg:hidden flex flex-col ml-auto gap-1 w-7 h-5 cursor-pointer"
           id="navMobile"
